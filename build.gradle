@@ -1,0 +1,33 @@
+// Gradle build file
+// CSCI 205 - Software Engineering and Design
+// Bucknell University
+// Original Author - B. King
+plugins{
+    id 'application'
+    id 'java'
+    id 'idea'
+    id 'org.openjfx.javafxplugin' version '0.0.8'
+}
+group 'org.chh'
+version '0.1-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+}
+test {
+    useJUnitPlatform()
+}
+// Needs to be either 11.0.2 or 14.0.2
+javafx {
+    version = "11.0.2"
+    modules = [ 'javafx.controls', 'javafx.fxml', 'javafx.media' ]
+}
+dependencies {
+    implementation 'org.slf4j:slf4j-simple:1.7.30'
+    implementation 'tech.tablesaw:tablesaw-core:0.38.1'
+    implementation 'tech.tablesaw:tablesaw-jsplot:0.38.1'
+    testImplementation('org.junit.jupiter:junit-jupiter:5.6.2')
+}
+application {
+    mainClassName = project.hasProperty("mainClass") ? project.getProperty("mainClass") : "lab08.exl.HelloFX"
+}
