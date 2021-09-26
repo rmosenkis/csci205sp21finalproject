@@ -11,7 +11,7 @@ Semester: Spring
 ## Team Information
 Cole Hausman - Scrum Master
 
-Ryan Mosekins - Developer
+Ryan Mosenkis - Developer
 
 Dylan LoPresti - Ethics & Justice Leader
 
